@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "buttplug-block-count",
+	"version": "${version}",
+	"name": "buttplug block count",
+	"description": "don't ask",
+	"authors": [
+		"serxka"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/serxka/buttplug-block-count"
+	},
+	"license": "MIT",
+	"icon": "assets/buttplug-block-count/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.knao.s.buttplugblockcount.ButtplugBlockCount"
+		],
+		"client": [
+			"net.knao.s.buttplugblockcount.ButtplugBlockCountClient"
+		]
+	},
+	"mixins": [
+		"buttplug-block-count.mixins.json",
+		{
+			"config": "buttplug-block-count.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.6",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
